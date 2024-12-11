@@ -1,4 +1,7 @@
+#!/usr/bin/python
+
 import random
+import sys
 
 password_chars = '1234567890'\
                 '!$%&/()=+*^#@'\
@@ -23,8 +26,11 @@ def generare_random_pass(lunghezza:int):
         random_password += random.choice(password_chars)
     return random_password
 
-p_lunghezza = prendere_password_lunghezza()
-if p_lunghezza == "exit":
-    print("Uscendo programma...")
-else: 
-    print(generare_random_pass(p_lunghezza))
+#codice che si esegue solo quando eseguito come script (importazione del codice non eseguirà questo)
+if __name__ == "__main__":
+    #da aggiungere logica qui per prendere argomenti via sys.argv
+    p_lunghezza = prendere_password_lunghezza()  
+    if p_lunghezza == "exit":
+        print("Uscendo dal programma...")
+    else: 
+        print(generare_random_pass(p_lunghezza))
