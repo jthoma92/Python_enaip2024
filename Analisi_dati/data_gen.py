@@ -33,7 +33,7 @@ rw.fill_walk()
 
 plt.style.use('dark_background')
 fig, ax = plt.subplots()
-ax.scatter(rw.x_values, rw.y_values, s=15)
+ax.scatter(rw.x_values, rw.y_values, s=15, cmap='plasma')
 ax.set_aspect('equal')
 print(rw.x_values,rw.y_values)
 plt.show()
