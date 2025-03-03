@@ -1,0 +1,5 @@
+SELECT ordini.id_ordine, carrello.id_articolo 
+FROM 
+ordini INNER JOIN carrello 
+ON ordini.id_ordine = carrello.id_ordine 
+WHERE ordini.id_ordine = 2;
