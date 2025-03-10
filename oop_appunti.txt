@@ -1,0 +1,6 @@
+Le basi di OOP:
+https://realpython.com/python3-object-oriented-programming/
+
+Per leggere degli metodi "Dunder" : 
+https://www.pythonmorsels.com/every-dunder-method/
+
