@@ -1,1 +1,4 @@
 Assieme al coodice,troverete qui appunti, link, etc. usati durante le lezioni di unit testing. 
+
+Utilizziamo pytest per i nostri proggetti: da importarlo nell'ambiente virtuale:
+  pip install pytest
