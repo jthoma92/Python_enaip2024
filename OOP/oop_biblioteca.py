@@ -52,34 +52,55 @@ class Utente:
         self.id_utente = id_utente
         self.libri_presi = []
 
-    def prendere_libro_in_prestito(self, libro):
+    def prendere_libro_in_prestito(self, libro:Libro):
         if libro.prendere_in_prestito() == True:
             self.libri_presi.append(libro.titolo)
             return f"Utente {self.id_utente} ha preso il libro {libro.titolo} in prestito"
         return f"Libro: {libro.titolo} non disponibile"         
 
-    def restituire_libro(self, libro):
+    def restituire_libro(self, libro:Libro):
         if libro.titolo in self.libri_presi:
             self.libri_presi.remove(libro.titolo)
             return libro.restituire()
         return f"Utente {self.id_utente} non ha attualmente il libro: {libro.titolo}, non possibile restituirlo"
 
+class Biblioteca:
+     def __init__(self, nome):
+         self.nome = nome
+         self.utenti = {}
+         self.libri = {}
+     
+     def aggiungere_libro(self, libro:Libro):
+        #aggiungere codice per prendere input per titolo, autore, pagine di un libro 
+        #poi creare oggetto ed eseguire il seguente codice:
+        if libro.titolo not in self.libri:
+            self.libri[libro.titolo] = libro
+            return True
+        return False
+     
+     def aggiungere_utente(self, utente:Utente):
+        if utente.id_utente not in self.utenti:
+            self.utenti[utente.id_utente] = utente
+            return True
+        return False
+
+
 # codice per il testing delle classi
 
-libro1 = Libro("Il Signore Degli Anelli", "JRR Tolkien", 405)  
-libro2 = Libro("IT", "Stephen King", 1350)  
-libro3 = Libro("East of Eden", "John Steinbeck", 700)  
+# libro1 = Libro("Il Signore Degli Anelli", "JRR Tolkien", 405) 
+# libro2 = Libro("IT", "Stephen King", 1350)  
+# libro3 = Libro("East of Eden", "John Steinbeck", 700)  
 
-utente1 = Utente("John", "Thomas", "U1")
-utente2 = Utente("Massimiliano", "De Bei", "U2")
+# utente1 = Utente("John", "Thomas", "U1")
+# utente2 = Utente("Massimiliano", "De Bei", "U2")
 
-print(utente1.prendere_libro_in_prestito(libro1))
-print(utente1.prendere_libro_in_prestito(libro2))
-print(utente2.prendere_libro_in_prestito(libro3))
-print(utente2.prendere_libro_in_prestito(libro1))   #Problema - questo libro è gia in prestito
-print(utente1.libri_presi)
-print(utente2.libri_presi)
-print(utente1.restituire_libro(libro1))
-print(utente1.restituire_libro(libro3))   # Problema - non ha questo libro da restituire
-print(utente1.libri_presi)
+# print(utente1.prendere_libro_in_prestito(libro1))
+# print(utente1.prendere_libro_in_prestito(libro2))
+# print(utente2.prendere_libro_in_prestito(libro3))
+# print(utente2.prendere_libro_in_prestito(libro1))   #Problema - questo libro è gia in prestito
+# print(utente1.libri_presi)
+# print(utente2.libri_presi)
+# print(utente1.restituire_libro(libro1))
+# print(utente1.restituire_libro(libro3))   # Problema - non ha questo libro da restituire
+# print(utente1.libri_presi)
 
