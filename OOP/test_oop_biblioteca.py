@@ -65,3 +65,34 @@ def test_Biblioteca_aggiungere_utente():
     assert biblioteca_test.aggiungere_utente(test_utente) == True
     assert test_utente.id_utente in biblioteca_test.utenti
     assert biblioteca_test.aggiungere_utente(test_utente) == False
+
+def test_Biblioteca_trovare_libro_con_titolo():
+        biblioteca_test = Biblioteca("Biblioteca Python")
+
+        test_libro = Libro("test", "thomas", 1233) #Creare nuovo libri per il test
+        test_libro2 = Libro("asdf", "John", 12223) 
+        test_libro3 = Libro("Is this a book", "Francesco", 1) 
+        test_libro4 = Libro("Cujo", "Stephen King", 10) 
+        test_libro5 = Libro("xyz", "asdf", 123331) 
+        
+        biblioteca_test.aggiungere_libro(test_libro)  #aggiungere libri
+        biblioteca_test.aggiungere_libro(test_libro2)
+        biblioteca_test.aggiungere_libro(test_libro3)
+        biblioteca_test.aggiungere_libro(test_libro4)
+        biblioteca_test.aggiungere_libro(test_libro5)
+
+#Bisogna trovare un modo per paragonare stringhe in minuscole per le condizioni, se no questi assert falliscono
+
+        assert biblioteca_test.trovare_libro_con_titolo("test") == True
+        assert biblioteca_test.trovare_libro_con_titolo("ASDF") == True
+        assert biblioteca_test.trovare_libro_con_titolo("is this a Book") == True
+        assert biblioteca_test.trovare_libro_con_titolo("Stephen King") == False
+        assert biblioteca_test.trovare_libro_con_titolo("asdf239sdlk") == False
+
+
+ 
+
+
+def test_Biblioteca_trovare_libro_con_autore():
+    pass
+

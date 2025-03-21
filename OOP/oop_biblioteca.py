@@ -65,12 +65,12 @@ class Utente:
         return f"Utente {self.id_utente} non ha attualmente il libro: {libro.titolo}, non possibile restituirlo"
 
 class Biblioteca:
-     def __init__(self, nome):
+    def __init__(self, nome):
          self.nome = nome
          self.utenti = {}
          self.libri = {}
      
-     def aggiungere_libro(self, libro:Libro):
+    def aggiungere_libro(self, libro:Libro):
         #aggiungere codice per prendere input per titolo, autore, pagine di un libro 
         #poi creare oggetto ed eseguire il seguente codice:
         if libro.titolo not in self.libri:
@@ -78,11 +78,21 @@ class Biblioteca:
             return True
         return False
      
-     def aggiungere_utente(self, utente:Utente):
+    def aggiungere_utente(self, utente:Utente):
         if utente.id_utente not in self.utenti:
             self.utenti[utente.id_utente] = utente
             return True
         return False
+     
+    def trovare_libro_con_titolo(self, titolo:str):
+        if titolo in self.libri:
+            return True
+        return False
+    
+         
+    def trovare_libro_con_autore(self, autore:str):
+        pass
+
 
 
 # codice per il testing delle classi
