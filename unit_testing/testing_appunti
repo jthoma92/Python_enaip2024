@@ -1,4 +1,14 @@
-Assieme al coodice,troverete qui appunti, link, etc. usati durante le lezioni di unit testing. 
+Assieme al codice,troverete qui appunti, link, etc. usati durante le lezioni di unit testing. 
 
 Utilizziamo pytest per i nostri proggetti: da importarlo nell'ambiente virtuale:
   pip install pytest
+
+Abbiamo seguito capitolo 11 in Python Crash Course per coprire testing:
+https://github.com/ValeriiaMur/Python-books-and-exercises/blob/master/python-crash-course.pdf
+
+Poi, abbiamo applicato le tecniche alle nostre classi del biblioteca (controllate i test files lì nella cartella OOP)
+
+Finalmente, abbiamo seguito TDD (test driven development) per sviluppare l'ultima classe della Biblioteca programma. 
+- Riferite a questo link per TDD
+  https://martinfowler.com/bliki/TestDrivenDevelopment.html
+  https://www.nexsoft.it/test-driven-development-tdd-una-metodologia-agile/
