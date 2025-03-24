@@ -1,0 +1,12 @@
+Esercizi ed esempi seguono dal link:
+https://realpython.com/python-gui-tkinter/
+
+Anche utile:
+https://medium.com/tomtalkspython/10-must-know-tkinter-widgets-for-stunning-python-guis-80ec1b7e0f33
+
+
+Attenzione ai widget: Label, Entry, Text, Frame, e Button
+
+Il file tkinter_basi.py è solo un esempio dei vari controlli, comandi per manipolare la finestra e display.
+
+pack_geo.py contiene codice per mostrare l'effetto del "geometry manager" pack() in tkinter. Vedremo anche place() e grid()
