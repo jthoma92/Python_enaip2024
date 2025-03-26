@@ -1,7 +1,6 @@
 from mysql.connector import Error, connect
 
-def delete_DATABASE():
-    database_nome = "shop_online"
+def delete_DATABASE(database_nome):
     query_delete_db = f"DROP DATABASE {database_nome}"
     try: 
         with connect(

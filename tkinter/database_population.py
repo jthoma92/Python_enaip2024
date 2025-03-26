@@ -1,7 +1,7 @@
 from mysql.connector import Error, connect
 
-def creare_DATABASE():
-    database_nome = "shop_online"
+def creare_DATABASE(database_nome):
+    
     query_create_db = f"CREATE DATABASE {database_nome}"
 
     tabella_articoli = """
@@ -77,19 +77,3 @@ def creare_DATABASE():
     except Error as e:
         print(e)
 
-    #Popolare tabelle con dati del test
-    try: 
-        with connect(
-            host = "localhost",
-            user = "python",
-            password = "password",
-            database = database_nome
-        ) as connection:
-            #CREATE DATABASE
-            with connection.cursor() as cursor:
-                cursor.execute(tabella_articoli)
-                cursor.execute(tabella_customer)
-                cursor.execute(tabella_ordini)
-                cursor.execute(tabella_carrello)
-    except Error as e:
-        print(e)
