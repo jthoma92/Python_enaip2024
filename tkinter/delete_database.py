@@ -1,10 +1,8 @@
 from mysql.connector import Error, connect
-from getpass import getpass
 
-database_nome = "shop_online"
-query_delete_db = f"DROP DATABASE {database_nome}"
-
-def delete_DATABASE(query):
+def delete_DATABASE():
+    database_nome = "shop_online"
+    query_delete_db = f"DROP DATABASE {database_nome}"
     try: 
         with connect(
             host = "localhost",
@@ -12,11 +10,8 @@ def delete_DATABASE(query):
             password = "password"
         ) as connection:
 
-            #CREATE DATABASE
+            #Cancellare DATABASE
             with connection.cursor() as cursor:
-                cursor.execute(query)
+                cursor.execute(query_delete_db)
     except Error as e:
         print(e)
-
-if __name__ == "__main__":
-    delete_DATABASE(query_delete_db)
