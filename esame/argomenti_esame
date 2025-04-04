@@ -1,0 +1,26 @@
+Per l'esame di Python - argomenti:
+IDE, Interpreter, REPL
+Variabili, Stringhe, Numeri, liste, Dizionari, 
+Metodi dei tipi (metodi stringhe, liste, ecc.)
+Liste - indici
+If, else, elif
+For, While cicli (iterabili)
+List Slice, List comprehension (facili)
+Definizioni delle funzioni e classi
+OOP temi (principi, oggetti)
+Librerie (builtin vs. esterna)
+PIP, pip list, requirements.txt
+Ambiente Virtuali
+GIT (le basi: https://rogerdudler.github.io/git-guide/)
+   - comandi init, status, clone, commit, push, pull, branch
+
+leggere/scrivere file (open() - modalità a, w, r)
+Context Managers (cosa fa la keyword "with")
+Gestire gli errori con try/except
+Debugger - cos'è un breakpoint
+Tkinter - geometry manager, widget, event loop, button command
+Unit testing - pytest, TDD, assert
+Database - MySQL, foreign/primary key, SELECT, phpmyadmin
+Pandas - jupyter, dataframe
+REST API - Get, metodi 
+Metodi Agile - scrum, user story, branching
